@@ -1,8 +1,16 @@
 import { Mail, Linkedin } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function Contact(){
 
 return(
+
+<motion.div
+initial={{ opacity:0, x:40 }}
+animate={{ opacity:1, x:0 }}
+exit={{ opacity:0, x:-40 }}
+transition={{ duration:0.3 }}
+>
 
 <section className="py-20 text-center">
 
@@ -40,6 +48,7 @@ LinkedIn
 
 </section>
 
+</motion.div>
 )
 
 }
